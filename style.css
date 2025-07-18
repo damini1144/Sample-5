@@ -1,0 +1,79 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 20px 5px 1px;
+  text-align: center;
+  background-color: #111;
+  color: #fa0606;
+}
+.intro-section h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.intro-section p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Background Section */
+.hero-section {
+  height: 80vh;
+  background-image: url('my-background.jpg'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: #f7570d;
+  border-radius: 50px;
+  padding: 10px 15px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  animation: blink 0.5s infinite;
+  transition: all 0.3s ease;
+}
+.whatsapp-button img {
+  width: 40px;
+  height: 40px;
+}
+.label-text {
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Animation */
+@keyframes blink {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Mobile view: only icon */
+@media (max-width: 768px) {
+  .label-text {
+    display: none;
+  }
+  .whatsapp-button {
+    padding: 15px;
+    border-radius: 50%;
+  }
+}
